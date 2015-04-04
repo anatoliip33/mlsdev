@@ -23,6 +23,7 @@
 
 # TextEdit
 *~
+*.keep
 
 # Vim
 *.swp
