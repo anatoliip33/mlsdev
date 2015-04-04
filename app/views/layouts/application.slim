@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Mlsdev
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+    link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+    link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"
+    script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
+
+
+  body
+    .layout
+      - if notice
+        p.alert.alert-success
+          = notice
+      - if alert
+        p.alert.alert-danger
+          = alert
+      = yield

@@ -1,0 +1,12 @@
+h4
+  b Name:
+strong
+  = @product.name
+h4
+  b Description:
+div
+  i
+    = @product.description
+#button
+  = link_to 'Edit product', edit_product_path, class: "btn btn-primary"
+  = link_to 'Delete product', @product, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
