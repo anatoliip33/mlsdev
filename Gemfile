@@ -41,5 +41,3 @@ gem 'spring',        group: :development
 
 gem 'slim'
 gem 'simple_form', github: 'plataformatec/simple_form'
-gem 'twitter-bootstrap-rails'
-gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'

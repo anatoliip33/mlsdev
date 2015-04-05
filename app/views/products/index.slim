@@ -1,6 +1,6 @@
 h1 Listing Products
 - @products.each do |product|
   h3
-    = link_to product.name, product, id: "popup_show"
+    = link_to product.name, product, remote: true
 
 = link_to 'Add Product', new_product_path, class: "btn btn-primary", id: "popup_create"

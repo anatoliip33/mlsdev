@@ -1,0 +1,13 @@
+// Render popup
+var html = $('<%=j render partial: 'popup', product: @product %>');
+// Hide old popup
+$('#product_popup').hide('fast');
+
+// Remove old popup
+$('#product_popup').remove();
+
+// Insert popup
+$('body').append(html);
+
+// // Show popup
+$('#product_popup').show('slow');
