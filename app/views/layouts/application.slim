@@ -9,7 +9,6 @@ html
     link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css"
     script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"
 
-
   body
     .layout
       - if notice
@@ -18,4 +17,6 @@ html
       - if alert
         p.alert.alert-danger
           = alert
+      = render 'form'
+      / = render 'show'
       = yield
