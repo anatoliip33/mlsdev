@@ -3,19 +3,29 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @product = Product.new
   end
 
   def show
     respond_to do |format|
+      format.html
       format.js { render layout: false }
     end
   end
 
   def new
     @product = Product.new
+    respond_to do |format|
+      format.html
+      format.js { render 'edit', layout: false }
+    end
   end
 
   def edit
+    respond_to do |format|
+      format.html
+      format.js { render layout: false }
+    end
   end
 
   def create

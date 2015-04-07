@@ -1,6 +1,9 @@
 h1 Listing Products
 - @products.each do |product|
   h3
-    = link_to product.name, product, remote: true
+    = link_to product.name, product, remote: true, :data => {:toggle=>"modal", :target => "#formModal"}
+/ button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal"
+/   | Add Product
+= link_to "Add Product", new_product_path, class: "btn btn-primary", remote: true, :data => {:toggle=>"modal", :target => "#formModal"}
 
-= link_to 'Add Product', new_product_path, class: "btn btn-primary", id: "popup_create"
+#formModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"

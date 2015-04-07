@@ -1,13 +1,25 @@
-.layout
-  h4
-    b Name:
-  strong
-    = @product.name
-  h4
-    b Description:
-  div
-    i
-      = @product.description
-  #button
-    = link_to 'Edit product', edit_product_path, class: "btn btn-primary"
-    = link_to 'Delete product', @product, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
+.modal-dialog
+  .modal-content
+    .modal-header
+      button.close aria-label="Close" data-dismiss="modal" type="button"
+        span aria-hidden="true"  &times;
+      h4#myModalLabel.modal-title
+        = 'Product#' + @product.id.to_s
+    .modal-body
+      .layout
+        h4
+          b Name:
+        strong
+          = @product.name
+        h4
+          b Description:
+        div
+          i
+            = @product.description
+        #button
+          = link_to 'Edit product', edit_product_path, class: "btn btn-primary", remote: true
+          = link_to 'Delete product', @product, class: "btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' }
+          #button
+            = link_to 'Back', products_path, class: "btn btn-success"
+    .modal-footer
+      button.btn.btn-default data-dismiss="modal" type="button"  Close
