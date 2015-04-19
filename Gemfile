@@ -50,6 +50,8 @@ end
 group :test do
   gem 'faker'
   gem 'capybara'
-  gem 'guard-rspec'
+  gem 'database_cleaner', '~> 1.4.1'
   gem 'launchy'
+  gem 'selenium-webdriver', '~> 2.43.0'
+  gem 'shoulda-matchers', '~> 2.6.2'
 end

@@ -32,7 +32,7 @@ RSpec.configure do |config|
   config.include FactoryGirl::Syntax::Methods
 
   # Include custom login macros
-  config.include LoginMacros
+  # config.include LoginMacros
 
   # Configure DatabaseCleaner to reset data between tests
   config.before(:suite) do
