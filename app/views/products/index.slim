@@ -3,7 +3,7 @@ h1 Listing Products
   h3
     = link_to product.name, product, remote: true, :data => {:toggle=>"modal", :target => "#formModal"}
 / button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal"
-/   | Add Product
+/    | Add Product
 = link_to "Add Product", new_product_path, class: "btn btn-primary", remote: true, :data => {:toggle=>"modal", :target => "#formModal"}
 
 #formModal.modal.fade aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1"
